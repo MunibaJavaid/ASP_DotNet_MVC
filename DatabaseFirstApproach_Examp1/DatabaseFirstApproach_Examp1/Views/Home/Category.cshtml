@@ -1,0 +1,26 @@
+﻿@model tbl_Category
+@{
+    ViewBag.Title = "Category";
+}
+
+<h2>Category</h2>
+
+@using (Html.BeginForm())
+{
+
+    <div class="mb-3 mt-3">
+        @Html.LabelFor(model => model.CategoryName,  new{@class = "col-md-2 text-right"})
+
+        @Html.TextAreaFor(model => model.CategoryName,new {@class = "form-control", @placeholder = "Enter Your Category Name"})
+        
+    </div>
+    <div class="mb-3">
+        @Html.LabelFor(model => model.Description, new { @class = "col-md-2 text-right" })
+
+        @Html.TextAreaFor(model => model.Description, new { @class = "form-control", @placeholder = "Enter Your Category Name" })
+
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+}
